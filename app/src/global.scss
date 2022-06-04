@@ -30,6 +30,21 @@
   position: relative;
 }
 
+.position--absolute {
+  position: absolute;
+}
+
+.absolute__center--horizontal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute__center--vertical {
+  top: 0;
+  transform: translateY(50%);
+}
+
+
 /* FLEXBOX */
 .flex--row {
   display: flex;
@@ -40,14 +55,30 @@
   flex-direction: column;
 }
 
-.flex__justify-content--between {
-  justify-content: space-between;
-}
-
 .flex__align-content--center {
   align-items: center;
 }
 
+.flex__grow--1 {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.flex__justify-content--end {
+  justify-content: end;
+}
+
+.flex__justify-content--start {
+  justify-content: start;
+}
+
+.flex__justify-content--center {
+  justify-content: center;
+}
+
+.flex__justify-content--between {
+  justify-content: space-between;
+}
 
 /* GRID */
 

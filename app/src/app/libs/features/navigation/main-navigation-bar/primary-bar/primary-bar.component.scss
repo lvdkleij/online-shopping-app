@@ -1,11 +1,5 @@
 @import 'src/app/libs/shared/constants/app-constants.scss';
 
-
-.fhw {
-  height: 100%;
-  width: 100%;
-}
-
 button {
   padding: 9px;
   height: max-content;
@@ -65,19 +59,16 @@ button {
   background-color: black !important;
   color: white;
 }
-
 /* host */
 
 :host {
-  display: grid;
-  grid-template-columns: minmax(100px, max-content) 1fr minmax(100px, max-content);
-  grid-template-rows: 1;
+  display: flex;
+  position: relative;
 }
 
 /* Responsive */
 
-@media (min-width: 500px) {
-  :host {
-    padding: 0 100px;
-  }
-}
+// @media (min-width: 500px) {
+//   :host {
+//   }
+// }
