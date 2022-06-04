@@ -13,11 +13,10 @@ button {
   }
 }
 
-.temp {
+.expandable {
   position: absolute;
   right: 0;
   top: calc(100% - 2px);
-
   width: 400px;
   height: 500px;
   border: 1px solid black;
