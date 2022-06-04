@@ -1,5 +1,5 @@
-<section id="audience" class="grid-layout__1-1 ">
-  <div class="fhw flex__row flex__justify-content--between flex__align-content--center">
+<section id="audience" class="grid__layout--1-1 ">
+  <div class="fhw flex--row flex__justify-content--between flex__align-content--center">
     <button
       *ngFor="let audience of TARGET_AUDIENCES"
       [ngClass]="{'is-target-audience': targetAudience === audience}"
@@ -7,13 +7,13 @@
     </button>
   </div>
 </section>
-<section id="logo" class="grid-layout__1-2 grid__justify-self--center" >
+<section id="logo" class="grid__layout--1-2 grid__justify-self--center" >
   <h1>LOGO</h1>
 </section>
-<section id="user" class="grid-layout__1-3">
-  <div class="fhw flex__row flex__justify-content--between flex__align-content--center">
+<section id="user" class="grid__layout--1-3">
+  <div class="fhw flex--row flex__justify-content--between flex__align-content--center">
     <div
-      *ngFor="let iconPath of USERS_THINGS; let i = index" class="position__relative"
+      *ngFor="let iconPath of USERS_THINGS; let i = index" class="position--relative"
       (mouseenter)="mousOver = i"
       (mouseleave)="mousOver = -1">
       <div class="border" [ngClass]="{'is-active': mousOver === i}">
