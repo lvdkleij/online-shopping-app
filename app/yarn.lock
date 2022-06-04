@@ -198,6 +198,22 @@
     "@angular-eslint/bundled-angular-compiler" "13.0.1"
     "@typescript-eslint/experimental-utils" "5.3.0"
 
+"@angular/animations@~13.2.2":
+  version "13.2.7"
+  resolved "https://registry.npmjs.org/@angular/animations/-/animations-13.2.7.tgz#d45e067124b469392eeee030eadb9c1fc960b1a2"
+  integrity sha512-FthGqRPQ1AOcOx/NIW65xeFYkQZJ7PpXcX59Kt+qkoUzngAQEY+UUpOteG52tmL0iZSVwOCjtxRFi9w4heVgEg==
+  dependencies:
+    tslib "^2.3.0"
+
+"@angular/cdk@13.3.9":
+  version "13.3.9"
+  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-13.3.9.tgz#a177196e872e29be3f84d3a50f778d361c689ff7"
+  integrity sha512-XCuCbeuxWFyo3EYrgEYx7eHzwl76vaWcxtWXl00ka8d+WAOtMQ6Tf1D98ybYT5uwF9889fFpXAPw98mVnlo3MA==
+  dependencies:
+    tslib "^2.3.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~13.2.3":
   version "13.2.6"
   resolved "https://registry.npmjs.org/@angular/cli/-/cli-13.2.6.tgz#d532375ac65b7e6204f979756bf12dda8392cd74"
@@ -271,6 +287,13 @@
   version "13.2.7"
   resolved "https://registry.npmjs.org/@angular/language-service/-/language-service-13.2.7.tgz#1a8f3ea0f8b2a2765d4695dfab7771a91e203a61"
   integrity sha512-hkZ1du/XxG6efri3FSOPc7JBwWHgHUAwI8dAUC+xFL3ZcVhFMPwrouMo8y4w/P5RctCO0ls4dDxThn/uDEZBQA==
+
+"@angular/material@13.3.9":
+  version "13.3.9"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-13.3.9.tgz#efd8ab5800b654df01e36426391d31531e412425"
+  integrity sha512-FU8lcMgo+AL8ckd27B4V097ZPoIZNRHiCe3wpgkImT1qC0YwcyXZVn0MqQTTFSdC9a/aI8wPm3AbTClJEVw5Vw==
+  dependencies:
+    tslib "^2.3.0"
 
 "@angular/platform-browser-dynamic@~13.2.2":
   version "13.2.7"
@@ -6581,6 +6604,11 @@ parse5-sax-parser@^6.0.1:
   integrity sha512-kXX+5S81lgESA0LsDuGjAlBybImAChYRMT+/uKCEXFBFOeEhS52qUCydGhU3qLRD8D9DVjaUo821WK7DM4iCeg==
   dependencies:
     parse5 "^6.0.1"
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parse5@^6.0.1:
   version "6.0.1"

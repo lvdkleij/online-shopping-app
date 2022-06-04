@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { MainNavigationBarFeature } from '../../features/navigation/main-navigation-bar/main-navigation-bar.component';
+import { MainNavigationBarFeatureModule } from '../../features/navigation/main-navigation-bar/main-navigation-bar.module';
 
 
 @NgModule({
@@ -13,8 +13,9 @@ import { MainNavigationBarFeature } from '../../features/navigation/main-navigat
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MainNavigationBarFeatureModule
   ],
-  declarations: [HomePage, MainNavigationBarFeature]
+  declarations: [HomePage]
 })
 export class HomePageModule {}

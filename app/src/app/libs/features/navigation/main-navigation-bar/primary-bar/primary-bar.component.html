@@ -1,0 +1,23 @@
+<section id="audience" class="grid-layout__1-1 ">
+  <div class="fhw flex__row flex__justify-content--between flex__align-content--center">
+    <button
+      *ngFor="let audience of TARGET_AUDIENCES"
+      [ngClass]="{'is-target-audience': targetAudience === audience}"
+      (click)="setNewAudience($event.target.innerText)">{{ audience }}
+    </button>
+  </div>
+</section>
+<section id="logo" class="grid-layout__1-2 grid__justify-self--center" >
+  <h1>LOGO</h1>
+</section>
+<section id="user" class="grid-layout__1-3">
+  <div class="fhw flex__row flex__justify-content--between flex__align-content--center">
+    <div
+      *ngFor="let iconPath of USERS_THINGS; let i = index" class="position__relative"
+      (mouseenter)="mousOver = i"
+      (mouseleave)="mousOver = -1">
+      <button [ngClass]="{'is-active': mousOver === i}"><img [src]="iconPath"></button>
+      <div class="temp" *ngIf="mousOver === i"></div>
+    </div>
+  </div>
+</section>
