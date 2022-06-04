@@ -1,6 +1,5 @@
 @import 'src/app/libs/shared/constants/app-constants.scss';
 
-
 .flex__row {
   display: flex;
 }
@@ -10,12 +9,14 @@
   width: 100%;
 }
 
-#audience button {
-  display: inline-block;
+button {
   padding: 9px;
+  height: max-content;
+}
+
+#audience button {
   font-weight: bold;
   font-size: 16px;
-  height: max-content;
   &:hover {
     background-color: rgb(237, 237, 237);
   }
@@ -28,26 +29,23 @@
 .temp {
   position: absolute;
   right: 0;
-  top: calc(100% - 1px);
+  top: calc(100% - 2px);
 
   width: 400px;
   height: 500px;
   border: 1px solid black;
   background-color: white;
-  z-index: 99;
 }
 
 #user button {
-  display: inline-block;
   position: relative;
-  padding: 9px;
-  border-bottom: none;
-  font-size: 16px;
-  height: max-content;
-  z-index: 100;
   font-weight: bold;
+}
+
+#user .border {
+  position: relative;
   border: 1px solid transparent;
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 #user img {
@@ -55,15 +53,23 @@
   scale: 1;
 }
 
+.border--left {
+  border-left: 1px solid white;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -1px;
+  bottom: 0;
+}
+
 .is-active {
   background-color: white !important;
   border: 1px solid black !important;
-  border-bottom: none !important;
+  z-index: 100;
 }
 
 .is-target-audience {
   background-color: black !important;
-  color: white !important;
+  color: white;
 }
 
 .flex__justify-content--between {

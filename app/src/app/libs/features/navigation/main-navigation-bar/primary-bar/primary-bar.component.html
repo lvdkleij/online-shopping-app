@@ -16,7 +16,10 @@
       *ngFor="let iconPath of USERS_THINGS; let i = index" class="position__relative"
       (mouseenter)="mousOver = i"
       (mouseleave)="mousOver = -1">
-      <button [ngClass]="{'is-active': mousOver === i}"><img [src]="iconPath"></button>
+      <div class="border" [ngClass]="{'is-active': mousOver === i}">
+        <button ><img [src]="iconPath"></button>
+        <div class="border--left"></div>
+      </div>
       <div class="temp" *ngIf="mousOver === i"></div>
     </div>
   </div>
