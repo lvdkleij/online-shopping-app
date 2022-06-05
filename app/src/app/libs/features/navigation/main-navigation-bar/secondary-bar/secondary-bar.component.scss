@@ -3,35 +3,50 @@
   gap: 10px;
 }
 
-.temp {
+a {
+  color: black;
+}
+
+.dropdown {
   height: 500px;
   width: 100%;
   background-color: red;
-  position: absolute;
 
   top: 100%;
   left: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .padding-h-16 {
   padding: 16px 0;
 }
 
-.padding--3 {
-  padding: 3px;
-}
 
-.padding__v--8 {
-  padding-left: 8px;
-  padding-right: 8px;
-}
 
-.padding__bottom--3 {
-  padding-bottom: 3px;
-}
 button {
   background-color: white;
   font-size: 14px;
   border-bottom: 2px solid transparent;
+}
+
+img {
+  height: 22px;
+  scale: 1;
+}
+
+form {
+  background-color: rgb(223, 223, 223);
+  border: 1px solid white;
+  padding: 4px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+
+
+  &:focus {
+    outline: none;
+  }
 }

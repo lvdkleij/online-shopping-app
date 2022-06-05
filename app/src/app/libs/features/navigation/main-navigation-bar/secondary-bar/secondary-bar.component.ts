@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { borderAnim, dropdownAnim } from './animations';
+import { borderAnim, dropdownAnim, overlayAnim, searchAnim } from './animations';
 
 @Component({
   selector: 'component-secondary-bar',
@@ -7,12 +7,15 @@ import { borderAnim, dropdownAnim } from './animations';
   styleUrls: ['./secondary-bar.component.scss'],
   animations: [
     dropdownAnim,
-    borderAnim
+    borderAnim,
+    searchAnim,
+    overlayAnim
   ]
 })
 export class SecondaryBarComponent implements OnInit {
 
   showDropdown = 0;
+  searchFocus = false;
   readonly CATEGORIES = ['Clothes', 'Shoes', 'Sport', 'Accessories', 'Designer'];
   constructor() { }
 
