@@ -5,8 +5,8 @@
       (click)="setNewAudience($event.target.innerText)">{{ audience }}
     </button>
 </section>
-<section id="logo" class="flex__grow--1 flex--row flex__justify-content--center">
-  <h1>LOGO</h1>
+<section id="logo" class="flex__grow--1 flex--row position--relative">
+  <h1 [@logoFancy] class="position--absolute">LOGO</h1>
 </section>
 <section id="user" class="flex__grow--1 flex--row flex__justify-content--end">
   <div
@@ -17,6 +17,8 @@
       <button ><img [src]="iconPath"></button>
       <div class="border--left"></div>
     </div>
-    <div class="expandable" *ngIf="mousOver === i"></div>
+    <div class="expandable" *ngIf="mousOver === i">
+      <component-user-dashboard-small></component-user-dashboard-small>
+    </div>
   </div>
 </section>

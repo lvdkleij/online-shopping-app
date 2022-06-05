@@ -4,13 +4,16 @@
 >
   <div
     *ngFor="let category of CATEGORIES; let i = 'index + 1'"
-    class="flex--row padding__b--3 flex__align-items--end"
+    class="flex--row padding__b--4px flex__align-items--end"
   >
-    <button class="padding--3 padding__v--12 padding__t--8" (mouseenter)="show(i)">
-      <a class="padding__b--2" [@showBorder]="showDropdown === i">{{ category }}</a>
+    <button class="padding--2px padding__h--12px padding__t--8px" (mouseenter)="show(i)">
+      <a class="padding__b--2px" [@showBorder]="showDropdown === i">{{ category }}</a>
     </button>
   </div>
-  <div [@showDropDown]="showDropdown > 0" class="position--absolute" class="dropdown position--absolute"></div>
+  <div
+    [@showDropDown]="showDropdown > 0"
+    class="dropdown position--absolute"
+  ></div>
 </div>
 <div >
   <form
@@ -18,7 +21,7 @@
     (focus)="search.focus(); searchFocus = true"
     tabIndex="0"
   >
-    <div class="flex--row flex__align-items--center padding--3">
+    <div class="flex--row flex__align-items--center padding--4px">
       <img src="assets/search.svg">
     </div>
     <input
@@ -28,6 +31,5 @@
       placeholder="Search"
       (focus)="searchFocus = true"
       (focusout)="searchFocus = false"
-    >
-  </form>
+    ></form>
 </div>

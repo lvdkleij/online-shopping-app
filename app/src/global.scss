@@ -49,21 +49,26 @@
   padding: 3px;
 }
 
-.padding__v--12 {
-  padding-left: 12px;
-  padding-right: 12px;
-}
+$sizes: 2px, 4px, 6px, 8px, 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px;
+@each $size in $sizes {
+  .padding__h--#{$size} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+  .padding__v--#{$size} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+  .padding__b--#{$size} {
+    padding-bottom: $size;
+  }
+  .padding__t--#{$size} {
+    padding-top: $size;
+  }
 
-.padding__b--3 {
-  padding-bottom: 3px;
-}
-
-.padding__b--2 {
-  padding-bottom: 2px;
-}
-
-.padding__t--8 {
-  padding-top: 8px;
+  .padding--#{$size} {
+    padding: $size;
+  }
 }
 
 /* FLEXBOX */
@@ -82,6 +87,10 @@
 
 .flex__align-items--end {
   align-items: flex-end;
+}
+
+.flex__align-items--start {
+  align-items: flex-start;
 }
 
 .flex__grow--1 {

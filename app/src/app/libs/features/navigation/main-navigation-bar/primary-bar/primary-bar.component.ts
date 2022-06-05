@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { logoAnim } from './animations';
 
 @Component({
   selector: 'component-primary-bar',
   templateUrl: './primary-bar.component.html',
   styleUrls: ['./primary-bar.component.scss'],
+  animations: [logoAnim]
 })
 export class PrimaryBarComponent implements OnInit {
 

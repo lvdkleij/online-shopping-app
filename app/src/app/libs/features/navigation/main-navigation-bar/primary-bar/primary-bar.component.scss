@@ -16,9 +16,8 @@ button {
 .expandable {
   position: absolute;
   right: 0;
+  width: max-content;
   top: calc(100% - 2px);
-  width: 400px;
-  height: 500px;
   border: 1px solid black;
   background-color: white;
   z-index: 2000;
@@ -64,7 +63,7 @@ button {
 :host {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Responsive */
@@ -73,3 +72,4 @@ button {
 //   :host {
 //   }
 // }
+
