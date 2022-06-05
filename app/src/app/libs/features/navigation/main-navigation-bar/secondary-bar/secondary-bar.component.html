@@ -1,7 +1,18 @@
-<div class="flex--row flex__grow--1 flex__justify-content--between">
-  <div *ngFor="let i of [1,2,3]">
-    <a>category</a>
+<div
+  class="flex--row flex__grow--1"
+  (mouseleave)="close()"
+>
+  <div
+    *ngFor="let category of CATEGORIES; let i = 'index + 1'"
+    (mouseenter)="show(i)"
+    class="padding__bottom--3"
+  >
+    <button class="padding--3 padding__v--8">
+      <a [@showBorder]="showDropdown === i">{{ category }}</a>
+    </button>
+
   </div>
+  <div [@showDropDown]="showDropdown" class="position--absolute" class="temp"></div>
 </div>
 <div style="width: 200px;">
   search
