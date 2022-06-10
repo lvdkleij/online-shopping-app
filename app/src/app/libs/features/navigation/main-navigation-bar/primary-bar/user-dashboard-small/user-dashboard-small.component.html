@@ -1,13 +1,13 @@
 <div class="flex--column temp">
   <div id="signin" class="margin--16px">
-    <button class="padding__h--18px padding__v--18px flex--row flex__justify-content--start">
+    <button class="padding__h--18px padding__v--18px flex--row flex__justify-content--start" [routerLink]="['/dashboard']">
       Sign in
     </button>
     <div id="createAccount">
       <a >Or create an account</a>
     </div>
   </div>
-  <div id="account">
+  <div id="account" (click)="showAuthentication()">
     <button class="padding__h--18px padding__v--18px flex--row flex__justify-content--start">
       <a class="padding__b--2px">Account</a>
     </button>

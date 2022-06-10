@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { MainNavigationBarFeatureModule } from '../../features/navigation/main-navigation-bar/main-navigation-bar.module';
+import { AuthenticationModule } from '../../features/authentication/authentication.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MainNavigationBarFeatureModule } from '../../features/navigation/main-n
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    MainNavigationBarFeatureModule
+    MainNavigationBarFeatureModule,
+    AuthenticationModule
   ],
   declarations: [HomePage]
 })

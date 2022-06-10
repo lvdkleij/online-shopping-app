@@ -1,0 +1,13 @@
+<div class="container"
+ [@showHideAuthenticationAnim]="showAuthentication$ | async">
+  <div style="position: relative;">
+    <div style="background-color: red; height: 25px; width: 25px; position: absolute; right: 0;" (click)="onHideAuthentication()">
+
+    </div>
+  </div>
+  <div style="color: white;">
+    {{ showAuthentication$ | async }}
+  </div>
+  <feature-register></feature-register>
+</div>
+

@@ -5,11 +5,13 @@ import { PrimaryBarComponent } from "./primary-bar/primary-bar.component";
 import { SecondaryBarComponent } from "./secondary-bar/secondary-bar.component";
 import {MatIconModule} from '@angular/material/icon';
 import { UserDashboardSmallComponent } from "./primary-bar/user-dashboard-small/user-dashboard-small.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   imports: [
     CommonModule,
     MatIconModule,
+    RouterModule
   ],
   exports: [MainNavigationBarFeature],
   declarations: [
