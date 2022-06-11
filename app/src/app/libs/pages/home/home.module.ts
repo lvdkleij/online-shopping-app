@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MainNavigationBarFeatureModule } from '../../features/navigation/main-navigation-bar/main-navigation-bar.module';
 import { AuthenticationModule } from '../../features/authentication/authentication.module';
+import { HomePageComponentModule } from '../../features/homepage/home-page/home-page.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AuthenticationModule } from '../../features/authentication/authenticati
     IonicModule,
     HomePageRoutingModule,
     MainNavigationBarFeatureModule,
-    AuthenticationModule
+    AuthenticationModule,
+    HomePageComponentModule
   ],
   declarations: [HomePage]
 })

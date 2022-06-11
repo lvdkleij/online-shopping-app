@@ -1,0 +1,38 @@
+<div class="container flex--row padding__h--128px flex__justify-content--center">
+  <div class="wrapper--left flex__grow--1 flex--column flex__justify-content--center padding--40px flex__row-gap--24px">
+    <h1>Welcome back!</h1>
+    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi perspiciatis</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque est quos neque nobis officia quia temporibus vel sed consequuntur laudantium fugit fuga exercitationem molestiae quaerat similique ipsa, quod dolorum doloribus.</p>
+    <div class="flex--row flex__column-gap--20px padding__t--20px">
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#facebook-2" />
+        </svg>
+      </div>
+
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#instagram" />
+        </svg>
+      </div>
+
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#twitter" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    id="form"
+    class="wrapper--right flex__grow--1 flex--column flex__justify-content--center padding--40px flex__row-gap--55px">
+    <h1>Sign in</h1>
+    <form class="flex--column flex__row-gap--55px">
+      <div class="flex--column  flex__row-gap--35px">
+        <ui-input-1 [styling]="{ placeholder: 'Email', color:'white', icon:'mail'}"></ui-input-1>
+        <ui-input-1 [styling]="{ placeholder: 'Password', color:'white', type:'password', icon:'lock'}"></ui-input-1>
+      </div>
+      <button>Sign in</button>
+    </form>
+  </div>
+</div>

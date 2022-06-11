@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: UserDashboardPage,
-    canActivate: [IsAuthenticated]
+    // canActivate: [IsAuthenticated]
   }
 ];
 
