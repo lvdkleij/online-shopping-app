@@ -1,24 +1,57 @@
 <div class="container flex--row padding__h--128px flex__justify-content--center">
-  <div class="wrapper--left flex__grow--1 flex--column flex__justify-content--center padding--40px">
-    <h1>Welcome !</h1>
+  <div class="wrapper--left flex__grow--1 flex--column flex__justify-content--center padding--40px flex__row-gap--24px">
+    <h1>Welcome back!</h1>
     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi perspiciatis</h3>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque est quos neque nobis officia quia temporibus vel sed consequuntur laudantium fugit fuga exercitationem molestiae quaerat similique ipsa, quod dolorum doloribus.</p>
-
-  </div>
-  <div class="wrapper--right flex__grow--1 flex--column flex__align-items--center padding--40px">
-    <h1>Create an account</h1>
-    <form class="flex--column">
-
-      <div class="flex--row">
-        <input class="flex__grow--1" type="text" placeholder="First Name">
-        <input class="flex__grow--1" type="text" placeholder="Last Name">
+    <p>Follow the latest trends:</p>
+    <div class="flex--row flex__column-gap--20px">
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#facebook-2" />
+        </svg>
       </div>
-      <input type="text" placeholder="Date of Birth">
-      <input type="text" placeholder="Email">
-      <input type="text" placeholder="Confirm Email">
-      <input type="password" placeholder="Password">
-      <input type="password" placeholder="Confirm Password">
-      <button>CREATE ACCOUNT</button>
+
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#instagram" />
+        </svg>
+      </div>
+
+      <div class="wrapper__social border flex--row flex__align-items--center flex__justify-content--center">
+        <svg viewBox="0 0 24 24" fill="white" class="social">
+          <use xlink:href="assets/icons.svg#twitter" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    id="form"
+    class="wrapper--right flex__grow--1 flex--column flex__justify-content--center padding--40px flex__row-gap--55px">
+    <h1>Create your account</h1>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="flex--column flex__row-gap--55px">
+      <div class="flex--column flex__row-gap--20px">
+        <div class="flex--row  flex__column-gap--20px">
+          <ui-input-1 class="flex__grow--1" [styling]="{ placeholder: 'First name', color:'white', icon: 'user--badge', width: 40}" formControlName="username"></ui-input-1>
+          <ui-input-1 class="flex__grow--1" [styling]="{ placeholder: 'Last name', color:'white', type:'password'}" formControlName="password"></ui-input-1>
+        </div>
+        <div class="flex--row  flex__column-gap--20px">
+          <label class="flex__align-self--center padding__b--12px" style="color: white;">Date of Birth</label>
+          <ui-input-1 class="flex__grow--1" [styling]="{ placeholder: '', color:'white', type: 'date'}" formControlName="username"></ui-input-1>
+        </div>
+      </div>
+
+      <div class="flex--column  flex__row-gap--20px">
+        <ui-input-1 [styling]="{ placeholder: 'Email', color:'white', icon:'mail'}" formControlName="username"></ui-input-1>
+        <ui-input-1 [styling]="{ placeholder: 'Confirm Email', color:'white', type:'password', icon:'mail'}" formControlName="password"></ui-input-1>
+      </div>
+      <div class="flex--column  flex__row-gap--20px">
+        <ui-input-1 [styling]="{ placeholder: 'Password', color:'white', icon:'lock'}" formControlName="username"></ui-input-1>
+        <ui-input-1 [styling]="{ placeholder: 'Confirm Password', color:'white', type:'password', icon:'lock'}" formControlName="password"></ui-input-1>
+      </div>
+      <button><h4 style="color: black;">Create account</h4></button>
     </form>
   </div>
 </div>

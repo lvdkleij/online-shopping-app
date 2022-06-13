@@ -1,10 +1,15 @@
 <div class="container"
- [@showHideAuthenticationAnim]="showAuthentication$ | async">
+ [@showHideAuthenticationAnim]="(showAuthentication$ | async).showAuthentication">
   <div style="position: relative;">
-    <div style="background-color: red; height: 25px; width: 25px; position: absolute; right: 0;" (click)="onHideAuthentication()">
-
+    <div class="wrapper__close" (click)="onHideAuthentication()">
+      <svg viewBox="0 0 24 24" stroke="white">
+        <use xlink:href="assets/icons.svg#cross" />
+      </svg>
     </div>
   </div>
-  <feature-signin></feature-signin>
-</div>
 
+  <ng-container *ngIf="(showAuthentication$ | async) as showAuth">
+    <feature-signin *ngIf="showAuth.authType === authTypes.SIGN_IN"></feature-signin>
+    <feature-register *ngIf="showAuth.authType === authTypes.CREATE_ACCOUNT"></feature-register>
+  </ng-container>
+</div>

@@ -1,6 +1,8 @@
 import { Component, Output, EventEmitter } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { ShowAuthentication } from "src/app/libs/features/authentication/store/actions";
+import { AuthTypes } from "src/app/libs/features/authentication/store/reducer";
+import { selectisAuthenticated, selectRedirect } from "src/app/libs/features/authentication/store/selectors";
 
 
 @Component({
@@ -13,16 +15,21 @@ export class UserDashboardSmallComponent {
   @Output()
   clicked = new EventEmitter<boolean>();
 
+  isAuthenticated$ = this.store.select(selectisAuthenticated);
+
+
   constructor(
     private readonly store: Store
-  ) {}
+  ) {
 
-  onClick() {
-    this.clicked.emit(true);
   }
 
-  showAuthentication() {
-    this.store.dispatch(ShowAuthentication({ showAuthentication: true}));
+  onCreateAccount() {
+    this.store.dispatch(ShowAuthentication({ showAuthentication: true, authType: AuthTypes.CREATE_ACCOUNT }));
+  }
+
+  onSignIn() {
+    this.store.dispatch(ShowAuthentication({ showAuthentication: true, authType: AuthTypes.SIGN_IN }));
   }
 }
 

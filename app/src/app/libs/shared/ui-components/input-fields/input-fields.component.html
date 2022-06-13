@@ -1,8 +1,27 @@
-<div class="h-100p" [style.color]="styling.color">
-  <div class="wrapper border-b flex--row flex__column-gap--12px padding__b--12px padding__l--6px">
-    <svg *ngIf="styling.icon" viewBox="0 0 24 24" [style.stroke]="styling.color">
+<div id="container" class="h-100p" [style.color]="styling.color" (focusin)="onFocus()" (focusout)="onFocusout()">
+  <div
+    class="wrapper flex--row flex__column-gap--12px padding__b--12px padding__l--6px border--untouched"
+    [ngClass]="{
+      'border--valid': inputValid,
+      'border--invalid': inputInvalid
+    }">
+    <svg
+      *ngIf="styling.icon"
+      attr.viewBox="{{ '0 0 ' + styling.width + ' 24'}}"
+      class="stroke--untouched"
+      >
       <use attr.xlink:href="{{ 'assets/icons.svg#' + styling.icon }}" />
     </svg>
-    <input [type]="styling.type" [placeholder]="styling.placeholder">
+    <input *ngIf="styling.type !== 'date'" [type]="styling.type" [placeholder]="styling.placeholder" [(ngModel)]="text" (ngModelChange)="onNgModelChange($event)">
+    <div
+      id="date"
+      *ngIf="styling.type === 'date'"
+      class="flex--row flex__align-items--center flex__column-gap--10px">
+      <input style="width: 30px;" type="text" pattern="[0-9]*" placeholder="dd" maxlength="2" size="2" />
+      /
+      <input style="width: 30px;" type="text" pattern="[0-9]*" placeholder="mm" maxlength="2" size="2" />
+      /
+      <input type="text" pattern="[0-9]*" placeholder="yyyy" maxlength="4" size="4" />
+    </div>
   </div>
 </div>

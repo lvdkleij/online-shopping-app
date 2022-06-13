@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { tap } from 'rxjs/operators';
 import { showHideAuthenticationAnim } from './animations';
 import { ShowAuthentication } from './store/actions';
-import { selectShowAuthentication } from './store/selectors';
+import { AuthTypes } from './store/reducer';
+import { selectisAuthenticated, selectShowAuthentication } from './store/selectors';
 
 @Component({
   selector: 'feature-authentication',
@@ -16,6 +18,11 @@ export class AuthenticationComponent implements OnInit {
 
   showAuthentication$ = this.store
     .select(selectShowAuthentication);
+
+  isAuthenticated$ = this.store
+    .select(selectisAuthenticated);
+
+  authTypes = AuthTypes;
 
   constructor(
     private readonly store: Store

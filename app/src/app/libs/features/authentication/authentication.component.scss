@@ -1,9 +1,18 @@
 .container {
   position: absolute;
   width: 100vw;
-  height: 500px;
+  height: max-content;
   background-color: #1b1b1b;
   z-index: 5000;
   bottom: 100%;
   padding: 25px;
+}
+
+.wrapper__close {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

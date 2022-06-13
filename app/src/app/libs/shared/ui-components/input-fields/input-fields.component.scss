@@ -35,11 +35,34 @@ input {
   height: 30px;
 }
 
-.border-b {
+.border--untouched {
   border-bottom: 1px solid white;
 }
 
+.border--valid {
+  border-bottom: 1px solid rgb(0, 180, 0);
+}
 
-svg {
-  height: 100%;
+.border--invalid {
+  border-bottom: 1px solid red;
+}
+
+.stroke--untouched {
+  stroke: white;
+}
+
+.stroke--valid {
+  stroke: rgb(0, 180, 0);
+}
+
+.stroke--invalid {
+  stroke: red;
+}
+
+#date {
+  input {
+    padding: 0;
+    width: max-content;
+    text-align: center;
+  }
 }

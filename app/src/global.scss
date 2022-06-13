@@ -29,7 +29,7 @@ $sizes: 2px, 4px, 6px, 8px, 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px
 /* BASE */
 .page-content-width {
   margin: auto !important;
-  max-width: 1250px !important;
+  max-width: 1200px !important;
 }
 
 .h--100p {
@@ -124,6 +124,18 @@ $sizes: 2px, 4px, 6px, 8px, 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px
 
 .flex__justify-content--between {
   justify-content: space-between;
+}
+
+.flex__align-self--center {
+  align-self: center;
+}
+
+.flex__align-self--end {
+  align-self: flex-end;
+}
+
+.flex__align-self--start {
+  align-self: flex-start;
 }
 
 @each $size in $sizes {

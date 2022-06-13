@@ -9,10 +9,16 @@ export const selectAuthenticationState = (state: AppState) => state.authenticati
 
 export const selectShowAuthentication = createSelector(
   selectAuthenticationState,
-  (state: State) => state.showAuthentication
+  (state: State) => ({ showAuthentication: state.showAuthentication, authType: state.authType })
 );
 
 export const selectisAuthenticated = createSelector(
   selectAuthenticationState,
   (state: State) => state.isAuthenticated
 );
+
+export const selectRedirect = createSelector(
+  selectAuthenticationState,
+  (state: State) => state.redirect
+);
+
