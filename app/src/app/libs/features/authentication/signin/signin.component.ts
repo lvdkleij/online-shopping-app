@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { IsAuthenticated, ShowAuthentication } from '../store/actions';
@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
   });
 
   constructor(
-    private formbuilder: FormBuilder,
+    private formbuilder: UntypedFormBuilder,
     private store: Store,
     private router: Router
   ) { }
