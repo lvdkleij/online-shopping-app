@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule, StoreRootModule } from '@ngrx/store';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { StoreModule, StoreRootModule } from '@ngrx/store';
     BrowserModule,
     IonicModule.forRoot({animated: false}),
     AppRoutingModule,
+    ScrollingModule,
     StoreModule.forRoot({}),
     NoopAnimationsModule,
     BrowserAnimationsModule],

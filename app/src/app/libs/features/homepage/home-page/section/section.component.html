@@ -10,8 +10,12 @@
     </div>
   </div>
   <div class="wrapper-bot padding__v--40px">
-    <div class="page-content-width">
-      <feature-media-card></feature-media-card>
-    </div>
+    <cdk-virtual-scroll-viewport>
+      <ion-list>
+        <ion-item *cdkVirtualFor="let item of [1,2,3]">
+          <feature-media-card></feature-media-card>
+        </ion-item>
+      </ion-list>
+    </cdk-virtual-scroll-viewport>
   </div>
 </div>
