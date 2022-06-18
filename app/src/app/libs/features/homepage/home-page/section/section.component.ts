@@ -9,6 +9,8 @@ export class SectionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
 
 }

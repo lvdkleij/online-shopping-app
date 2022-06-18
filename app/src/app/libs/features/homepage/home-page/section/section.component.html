@@ -1,19 +1,24 @@
 <div class="container flex--column">
   <div class="wrapper-top padding__t--50px">
     <div class="flex--row page-content-width h--100p">
-      <div class="wrapper-left flex--column padding__t--12px">
-        <h1>Sneaker hot drops</h1>
-        <h2>The most trendy kicks</h2>
-        <a class="padding__b--2px">Discover more</a>
+      <div class="wrapper-left flex--column padding__t--12px flex__row-gap--30px">
+        <div>
+          <h1>Sneaker hot drops</h1>
+          <h2>The most trendy kicks</h2>
+        </div>
+        <div class="discoverMore flex--row flex__column-gap--6px padding__b--2px">
+          <a>Discover more </a>
+          <div class="arr">
+            <svg viewBox="0 0 24 24" stroke="black">
+              <use xlink:href="assets/icons.svg#arrow-right" />
+            </svg>
+          </div>
+        </div>
       </div>
       <div class="wrapper-right"></div>
     </div>
   </div>
   <div class="wrapper-bot padding__v--40px">
-    <ul class="flex--row flex__column-gap--12px page-content-width">
-      <li *ngFor="let item of [1,2,3,4,5,6,7,8]">
-        <feature-media-card></feature-media-card>
-      </li>
-    </ul>
+    <feature-carousel></feature-carousel>
   </div>
 </div>

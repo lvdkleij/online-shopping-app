@@ -1,0 +1,46 @@
+
+ul {
+  padding: 0;
+  min-height: 100%;
+  list-style-type: none; /* Remove bullets */
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.scroll--left, .scroll--right {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scroll--left {
+  left: max(calc(50% - 590px), 30px);
+}
+
+.scroll--right {
+  right: max(calc(50% - 590px), 30px);
+}
+
+cdk-virtual-scroll-viewport {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 611.32px;
+
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  scroll-behavior: smooth;
+}
+
+::ng-deep .cdk-virtual-scroll-content-wrapper {
+  padding: 0 calc(50% - 590px) !important;
+}

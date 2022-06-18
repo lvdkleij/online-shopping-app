@@ -3,16 +3,18 @@
 }
 
 .container {
-  cursor: pointer;
 }
 
 .wrapper-top {
   height: 350px;
   background-color: #0D7BB2;
+  cursor: pointer;
+
 }
 
 .wrapper-bot {
   background-color: hsl(200,86.4%,22.5%);
+  position: relative;
 }
 
 .wrapper-right {
@@ -39,26 +41,19 @@ h2 {
 
 a {
   width: fit-content;
-  margin-top: 30px;
   color: black;
   font-weight: bold;
   font-family: Helvetica, sans-serif;
+}
 
+.discoverMore {
+  width: max-content;
   &:hover {
     border-bottom: 2px solid black;
   }
 }
 
-ul {
-  list-style-type: none; /* Remove bullets */
-  overflow-x: scroll;
-
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-
-  &::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-  }
-
-  scroll-behavior: smooth;
+.arr {
+  width: 20px;
+  height: 20px;
 }

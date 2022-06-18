@@ -1,0 +1,27 @@
+
+<div class="wrapper" >
+  <cdk-virtual-scroll-viewport itemSize="350px" orientation="horizontal">
+    <ul class="flex--row flex__column-gap--12px">
+      <li  *cdkVirtualFor="let itemss of [1,2,3,4,5,6,7,8]">
+        <feature-media-card></feature-media-card>
+      </li>
+    </ul>
+  </cdk-virtual-scroll-viewport>
+
+  <ng-container *ngIf="(isScrolling$ | async)"></ng-container>
+  <ng-container *ngIf="(isScrolling$$ | async) === false">
+    <div *ngIf="visible.left > 0" class="scroll--left padding--6px" (click)="onScrollLeft()">
+      <svg viewBox="0 0 24 24" stroke="black">
+        <use xlink:href="assets/icons.svg#arrow-left" />
+      </svg>
+    </div>
+    <div *ngIf="visible.right > 0" class="scroll--right padding--6px" (click)="onScrollRight()">
+      <svg viewBox="0 0 24 24" stroke="black">
+        <use xlink:href="assets/icons.svg#arrow-right" />
+      </svg>
+    </div>
+  </ng-container>
+</div>
+
+
+
