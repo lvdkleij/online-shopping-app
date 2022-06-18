@@ -1,6 +1,6 @@
 <div class="container flex--column">
-  <div class="wrapper-top">
-    <div class="flex--row page-content-width padding__t--50px h--100p">
+  <div class="wrapper-top padding__t--50px">
+    <div class="flex--row page-content-width h--100p">
       <div class="wrapper-left flex--column padding__t--12px">
         <h1>Sneaker hot drops</h1>
         <h2>The most trendy kicks</h2>
@@ -10,12 +10,10 @@
     </div>
   </div>
   <div class="wrapper-bot padding__v--40px">
-    <cdk-virtual-scroll-viewport>
-      <ion-list>
-        <ion-item *cdkVirtualFor="let item of [1,2,3]">
-          <feature-media-card></feature-media-card>
-        </ion-item>
-      </ion-list>
-    </cdk-virtual-scroll-viewport>
+    <ul class="flex--row flex__column-gap--12px page-content-width">
+      <li *ngFor="let item of [1,2,3,4,5,6,7,8]">
+        <feature-media-card></feature-media-card>
+      </li>
+    </ul>
   </div>
 </div>

@@ -28,8 +28,7 @@ $sizes: 2px, 3px, 4px, 5px, 6px, 8px, 10px, 12px, 14px, 16px, 18px, 20px, 22px, 
 
 /* BASE */
 .page-content-width {
-  margin: auto !important;
-  max-width: 1200px !important;
+  padding: 0 calc(50% - 590px) !important;
 }
 
 .h--100p {
